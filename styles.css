@@ -1,0 +1,256 @@
+/*****************/
+/*AJUSTES GLOBAIS*/
+/*****************/
+
+/*TODAS AS TAGS*/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+/*RAIZ*/
+:root {
+    /*CORES NEUTRAS*/
+    --dark-cyan:                    hsl(185, 75%, 40%);
+    --dark-grayish-blue:            hsl(228, 10%, 46%);
+    --very-dark-desaturated-blue:   hsl(230, 24%, 24%);
+
+    /*CORES NEUTRAS*/
+    --dark-gray: hsl(0, 0%, 60%);
+}
+
+/************/
+/*BACKGROUND*/
+/************/
+
+/*BACKGROUND*/
+#background {
+    background: var(--dark-cyan);
+
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+}
+/*PARTE DE CIMA DO BACKGROUND*/
+#background #background-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    margin: -50vh 0 0 -50vw;
+    
+    width: 100vw;
+    height: 100vh;
+}
+/*PARTE DE BAIXO DO BACKGROUND*/
+#background #background-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    margin: 0 -50vw -50vh 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+/********************/
+/*CONTEÚDO DA PÁGINA*/
+/********************/
+
+/*PAGE CONTENT*/
+#page-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    min-height: 41.75rem;
+}
+
+/*******************/
+/*CONTAINER DO CARD*/
+/*******************/
+
+/*CARD CONTAINER*/
+#card-container {
+    background: hsl(0, 0%, 100%);
+
+    border-radius: 1rem;
+
+    width: 21.875rem;
+}
+
+/****************/
+/*HEADER DO CARD*/
+/****************/
+
+/*HEADER DO CARD*/
+#card-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.15);
+}
+/*BACKGROUND DO HEADER*/
+#card-header-background {
+    background-image: url("./assets/bg-pattern-card.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 1rem 1rem 0 0;
+
+    width: 100%;
+    height: 8.75rem;
+}
+/*IMAGEM DO PROFILE*/
+#profile-image {
+    background-image: url("./assets/image-victor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 0.3125rem solid hsl(0, 0%, 100%); 
+    border-radius: 50%;
+
+    margin: -3.3125rem 0 0 0;
+
+    width: 6.625rem;
+    height: 6.625rem;
+}
+/*NOME DO PROFILE*/
+#profile-name {
+    display: block;
+
+    color: var(--very-dark-desaturated-blue);
+
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    margin: 1.25rem 0 0.5rem 0;
+}
+#profile-name span {
+    color: var(--dark-grayish-blue);
+
+    font-weight: 400;
+
+    margin-left: 0.25rem;
+}
+/*LOCALIZAÇÃO DO PROFILE*/
+#profile-location {
+    color: var(--dark-grayish-blue);
+
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    margin-bottom: 1.25rem;
+}
+
+/***********************/
+/*INFORMAÇÕES DO CARTÃO*/
+/***********************/
+
+/*INFORMAÇÕES DO PROFILE*/
+#profile-informations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+/*DIV COM A INFORMAÇÃO*/
+#profile-informations div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    margin: 0 1.25rem 0 1.25rem;
+}
+/*TÍTULO DA INFORMAÇÃO*/
+#profile-informations div h2 {
+    color: var(--very-dark-desaturated-blue);
+
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    margin: 1.25rem 0 0.25rem 0;
+}
+/*INFORMAÇÃO*/
+#profile-informations div p {
+    color: var(--dark-grayish-blue);
+
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    letter-spacing: 0.0625rem;
+
+    margin-bottom: 1.25rem;
+}
+
+/*******************/
+/*FUNÇÕES ESPECIAIS*/
+/*******************/
+
+/*CLASSE HIDDEN*/
+.hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+}
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+
+/*MEDIA PARA TELAS MENORES QUE 375px*/
+@media only screen and (max-width: 375px) {
+    /*HTML TAG*/
+    html{
+        font-size: 4.2666vw;
+    }
+}
